@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PickACardUI"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Card Picker" Height="300
+        " Width="800">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition/>
@@ -18,11 +19,12 @@
 
 
         <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Margin="20">
-            <Label x:Name="label" Content="How many cards should I pick?" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="20" Width="271"/>
-            <ComboBox x:Name="comboBox" HorizontalAlignment="Left" VerticalAlignment="Top" Width="271" IsEditable="True"/>
+            <Label x:Name="label" Content="How many cards should I pick?" HorizontalAlignment="Left" FontSize="20" Width="285"/>
+            <Slider x:Name="numberOfCards" Width="256" Maximum="15" Minimum="1" TickPlacement="Both" Background="White" Foreground="Black" SmallChange="1" IsSnapToTickEnabled="True"/>
+
         </StackPanel>
-        <Button x:Name="Button" Content="Pick some cards" HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Top" Margin="0,10,0,0"/>
-        <ListBox x:Name="listBox" Margin="10,109,10,108" Grid.RowSpan="2" Grid.Column="1"/>
+        <Button x:Name="Button" Content="Pick some cards" HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Top" Margin="0,10,0,0" FontSize="20" Click="Button_Click"/>
+        <ListBox x:Name="listOfCards" Margin="10,71,10,71" Grid.RowSpan="2" Grid.Column="1" FontSize="20"/>
 
     </Grid>
 </Window>
